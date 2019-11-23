@@ -60,6 +60,126 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-HPU-personal-training" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/23/HPU-personal-training/">HPU personal training</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/23/HPU-personal-training/" class="article-date">
+  <time datetime="2019-11-23T13:26:15.000Z" itemprop="datePublished">2019-11-23</time>
+</a>
+    
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题解/">题解</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-doorframe" itemprop="articleBody">
+      
+        <h1 id="HPU-personal-training"><a href="#HPU-personal-training" class="headerlink" title="HPU personal training"></a>HPU personal training</h1><h2 id="A-Engines-AtCoder-4900"><a href="#A-Engines-AtCoder-4900" class="headerlink" title="A - Engines    AtCoder - 4900 "></a><a href="https://vjudge.net/problem/AtCoder-4900" target="_blank" rel="noopener">A - Engines</a>    <a href="https://vjudge.net/problem/2721615/origin" target="_blank" rel="noopener">AtCoder - 4900 </a></h2><p>Problem Statement</p>
+<p>### </p>
+<p>E869120 is initially standing at the origin (0,0) in a two-dimensional plane.</p>
+<p>He has <em>N</em> engines, which can be used as follows:</p>
+<ul>
+<li>When E869120 uses the <em>i</em>-th engine, his <em>X</em>- and <em>Y</em>-coordinate change by <em>x**i</em> and <em>y**i</em>, respectively. In other words, if E869120 uses the <em>i</em>-th engine from coordinates (<em>X</em>,<em>Y</em>), he will move to the coordinates (<em>X</em>+<em>x**i</em>,<em>Y</em>+<em>y**i</em>).</li>
+<li>E869120 can use these engines in any order, but each engine can be used at most once. He may also choose not to use some of the engines.</li>
+</ul>
+<p>He wants to go as far as possible from the origin. Let (<em>X</em>,<em>Y</em>) be his final coordinates. Find the maximum possible value of √<em>X</em>2+<em>Y</em>2 , the distance from the origin.</p>
+<p>Constraints</p>
+<p>### </p>
+<ul>
+<li>1≤<em>N</em>≤100</li>
+<li>−1 000 000≤<em>x**i</em>≤1 000 000</li>
+<li>−1 000 000≤<em>y**i</em>≤1 000 000</li>
+<li>All values in input are integers.</li>
+</ul>
+<p>Input</p>
+<p>### </p>
+<p>Input is given from Standard Input in the following format:</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">N</span><br><span class="line">x1 y1</span><br><span class="line">x2 y2</span><br><span class="line"> : :</span><br><span class="line">xN yN</span><br></pre></td></tr></table></figure></div>
+<p>Output</p>
+<p>### </p>
+<p>Print the maximum possible final distance from the origin, as a real value. Your output is considered correct when the relative or absolute error from the true answer is at most 10−10.</p>
+<p>Sample Input 1</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">0 10</span><br><span class="line">5 -5</span><br><span class="line">-5 -5</span><br></pre></td></tr></table></figure></div>
+<p>Sample Output 1</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10.000000000000000000000000000000000000000000000000</span><br></pre></td></tr></table></figure></div>
+<p>The final distance from the origin can be 10 if we use the engines in one of the following three ways:</p>
+<ul>
+<li>Use Engine 1 to move to (0,10).</li>
+<li>Use Engine 2 to move to (5,−5), and then use Engine 3 to move to (0,−10).</li>
+<li>Use Engine 3 to move to (−5,−5), and then use Engine 2 to move to (0,−10).</li>
+</ul>
+<p>The distance cannot be greater than 10, so the maximum possible distance is 10.</p>
+<p>Sample Input 2</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 1</span><br><span class="line">1 0</span><br><span class="line">0 1</span><br><span class="line">-1 0</span><br><span class="line">0 -1</span><br></pre></td></tr></table></figure></div>
+<p>Sample Output 2</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.828427124746190097603377448419396157139343750753</span><br></pre></td></tr></table></figure></div>
+<p>The maximum possible final distance is 2√2 =2.82842…. One of the ways to achieve it is:</p>
+<ul>
+<li>Use Engine 1 to move to (1,1), and then use Engine 2 to move to (2,1), and finally use Engine 3 to move to (2,2).</li>
+</ul>
+<p>Sample Input 3</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">1 1</span><br><span class="line">2 2</span><br><span class="line">3 3</span><br><span class="line">4 4</span><br><span class="line">5 5</span><br></pre></td></tr></table></figure></div>
+<p>Sample Output 3</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">21.213203435596425732025330863145471178545078130654</span><br></pre></td></tr></table></figure></div>
+<p>If we use all the engines in the order 1→2→3→4→5, we will end up at (15,15), with the distance 15√2 =21.2132… from the origin.</p>
+<p>Sample Input 4</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">0 0</span><br><span class="line">0 1</span><br><span class="line">1 0</span><br></pre></td></tr></table></figure></div>
+<p>Sample Output 4</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.414213562373095048801688724209698078569671875376</span><br></pre></td></tr></table></figure></div>
+<p>There can be useless engines with (<em>x**i</em>,<em>y**i</em>)=(0,0).</p>
+<p>Sample Input 5</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">90447 91000</span><br></pre></td></tr></table></figure></div>
+<p>Sample Output 5</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">128303.000000000000000000000000000000000000000000000000</span><br></pre></td></tr></table></figure></div>
+<p>Note that there can be only one engine.</p>
+<p>Sample Input 6</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">96000 -72000</span><br><span class="line">-72000 54000</span><br></pre></td></tr></table></figure></div>
+<p>Sample Output 6</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">120000.000000000000000000000000000000000000000000000000</span><br></pre></td></tr></table></figure></div>
+<p>There can be only two engines, too.</p>
+<p>Sample Input 7</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">1 2</span><br><span class="line">3 4</span><br><span class="line">5 6</span><br><span class="line">7 8</span><br><span class="line">9 10</span><br><span class="line">11 12</span><br><span class="line">13 14</span><br><span class="line">15 16</span><br><span class="line">17 18</span><br><span class="line">19 20</span><br></pre></td></tr></table></figure></div>
+<p>Sample Output 7</p>
+<p>### </p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">148.660687473185055226120082139313966514489855137208</span><br></pre></td></tr></table></figure></div>
+<p>题解：极角排序加暴力</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">double</span> ll;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	ll x, y;</span><br><span class="line"><span class="keyword">friend</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(node a, node b) &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">atan2</span>(a.x, a.y) &gt; <span class="built_in">atan2</span>(b.x, b.y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;r[<span class="number">1234567</span>];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; r[i].x &gt;&gt; r[i].y;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(r, r + n);</span><br><span class="line">	ll x, y, ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		x = r[i].x; y = r[i].y;</span><br><span class="line">		ans = max(ans, r[i].x * r[i].x + r[i].y * r[i].y);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = (i + <span class="number">1</span>) % n; j != i; j = (j+<span class="number">1</span>)%n) &#123;</span><br><span class="line">			x += r[j].x; y += r[j].y;</span><br><span class="line">			ans = max(ans, x * x + y * y);</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; fixed &lt;&lt; setprecision(<span class="number">30</span>) &lt;&lt; ((<span class="keyword">long</span> <span class="keyword">double</span>)<span class="built_in">sqrt</span>(ans)) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-第一次强化训练江西省赛" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -244,7 +364,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/强化训练/">强化训练</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/题/">题</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/强化训练/">强化训练</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/题/">题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/题解/">题解</a></li></ul>
     </div>
   </div>
 
@@ -254,7 +374,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/强化训练/" style="font-size: 10px;">强化训练</a> <a href="/tags/题/" style="font-size: 10px;">题</a>
+      <a href="/tags/强化训练/" style="font-size: 10px;">强化训练</a> <a href="/tags/题/" style="font-size: 10px;">题</a> <a href="/tags/题解/" style="font-size: 10px;">题解</a>
     </div>
   </div>
 
@@ -273,6 +393,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/11/23/HPU-personal-training/">HPU personal training</a>
+          </li>
         
           <li>
             <a href="/2019/11/16/第一次强化训练江西省赛/">第一次强化训练江西省赛</a>
